@@ -1,5 +1,9 @@
 #include "tcpsocket.hh"
 #include "threadclass.h"
+
+#include <sys/types.h>
+#include <unistd.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -208,6 +212,8 @@ int main(int argc, char **argv)
   int port = 1500;
   if (argc == 2 )
     port = strtol(argv[1], 0, 10);
+
+  std::cout << "COMPILESERVER_PID " << getpid() << "\n";
 
   TCPCompileServer(port);
 }

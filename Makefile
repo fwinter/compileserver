@@ -1,7 +1,4 @@
-CXX=g++
-CPPFLAGS=-I/usr/include/happycoders/socket
-LDFLAGS=-L/usr/lib/happycoders
-
+include make.inc
 
 all: server
 
